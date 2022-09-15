@@ -2,21 +2,21 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class UseRegistration {
-    public  void  valid(String firstName){
+    public  void  valid(String lastName){
         Pattern pattern = Pattern.compile("^[A-Z]{3}");
-        Matcher check = pattern.matcher(firstName);
+        Matcher check = pattern.matcher(lastName);
         if(check.matches()){
-            System.out.println("first Name is Valid");
+            System.out.println("last Name  is Valid");
         }
         else {
-            System.out.println("First name not Valid ! please Enter valid Name");
+            System.out.println(" last Name not Valid ! please Enter valid Name");
         }
     }
     public static void main(String[] args) {
         UseRegistration user =new UseRegistration();
         Scanner sc =new Scanner(System.in);
-        System.out.println("Enter first Name :");
-        String firstName =sc.nextLine();
-        user.valid(firstName);
+        System.out.println("Enter last Name :");
+        String lastName =sc.nextLine();
+        user.valid(lastName);
     }
 }
