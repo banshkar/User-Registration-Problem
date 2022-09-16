@@ -3,7 +3,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class UseRegistration {
     public  void  validPassword(String Password){
-        Pattern pattern = Pattern.compile("^[a-z]{5,}[0-9]{1,}[A-Z]{1,}[@#%*]+$");
+        Pattern pattern = Pattern.compile("^[a-z]{5,}[0-9]{1,}[A-Z]{1,}[@#%*]{1}+$");
         Matcher check = pattern.matcher(Password);
         if(check.matches()){
             System.out.println(" Password is Valid");
